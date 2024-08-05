@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <title>E.Site</title>
+</head>
+
+<body class="bg-white">
+    <div class="bg-gray-900 p-4 flex items-center justify-between">
+        <!--logo-->
+        <div class="flex items-center space-x-2">
+            <img src="images/R (1).png" alt="Brand Logo" class="h-12">
+        </div>
+
+        <!--search bar-->
+        <div class="ml-6 mr-6  flex-1 mx-4">
+            <input type="text" placeholder="Search Products" class="w-full p-2 rounded-md px-4 outline-none">
+        </div>
+
+        <!--navigation links-->
+        <div class="flex space-x-2 text-white">
+            <a href="http://127.0.0.1:5500/index.html"
+                class=" w-auto h-auto py-2 px-2  border-transparent hover:text-orange-400">Home</a>
+            <a href="http://127.0.0.1:5500/catalog.html"
+                class="hover:text-orange-400 w-auto h-auto py-2 px-2  border-transparent ">Catalog</a>
+
+            <a href="http://127.0.0.1:5500/About.html"
+                class="text-orange-400 w-auto h-auto py-2 px-2  border-transparent ">About
+                Us</a>
+            <a href="http://127.0.0.1:5500/contact.html"
+                class="hover:text-orange-400 w-auto h-auto py-2 px-2  border-transparent ">Contact</a>
+
+            <!--sign in | Sign up-->
+            <a href="#" id="open-signup-modal" class="  w-auto h-auto py-2 px-3 hover:text-blue-300 ">SignUp</a>
+        </div>
+
+        <!--shopping cart icon -->
+        <div class="relative mr-6">
+            <a href="http://127.0.0.1:5500/cart.html">
+                <img class="ml-6 h-14 opacity-9  0" src="images/Untitled design.png" alt="">
+                <span
+                    class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!--sign in | sign up-->
+    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+
+    <!--sign Up modal-->
+    <div id="signup-modal-content" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Sign Up</h2>
+                <button id="close-signup-modal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <form id="signup-form">
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-900">Username</label>
+                    <input type="text" id="username"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-900">Email</label>
+                    <input type="email" id="email"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="contact" class="block text-gray-900">Contact</label>
+                    <input type="tel" id="contact"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-900">Password</label>
+                    <input type="password" id="password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="confirm-password" class="block text-gray-900">Confirm Password</label>
+                    <input type="password" id="confirm-password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <button type="submit"
+                    class="w-full py-2 px-4 bg-gray-950 text-white  rounded-md hover:bg-gray-900">Create
+                    Account</button>
+            </form>
+            <p class="mt-4 text-sm text-gray-900">Already have an account? <a href="#" id="open-signin-modal"
+                    class="text-blue-600 text-1xl hover:underline">Sign In</a></p>
+        </div>
+    </div>
+
+    <!--sign In modal-->
+    <div id="signin-modal-content" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Sign In</h2>
+                <button id="close-signin-modal" class="text-gray-900 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <form id="signin-form">
+                <div class="mb-4">
+                    <label for="signin-email" class="block text-gray-900">Email</label>
+                    <input type="email" id="signin-email"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="signin-password" class="block text-gray-900">Password</label>
+                    <input type="password" id="signin-password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <button type="submit" class="w-full py-2 px-4 bg-gray-950 text-white rounded-md hover:bg-gray-900">Login
+                    to Your Account</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="container mx-auto py-10 px-12 max-w-6xl lg:px-20 bg-white  justify-text">
+        <p class="text-gray-700 leading-relaxed mt-12">
+            Our journey into the realm of e-commerce commenced with Amazon, a pioneering global marketplace that has
+            become synonymous with online retail. It presented us with an unmatched opportunity to connect with millions
+            of customers worldwide, allowing our products to transcend geographical boundaries and reach diverse
+            audiences. From the outset, our goal was not just to sell, but to create an experience—one that is marked by
+            excellence, reliability, and a deep commitment to customer satisfaction. Over time, we have meticulously
+            honed our craft, understanding the nuances of online selling, and refining our strategies to not only meet
+            but exceed the expectations of our customers.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4">
+            Central to our philosophy is an unwavering dedication to quality. We believe that the success of any product
+            hinges on its quality, and this belief drives every decision we make. Our journey begins with the careful
+            selection of materials. We source only the finest, ensuring that each component of our products is of the
+            highest caliber. This meticulous attention to detail extends to every stage of production, where skilled
+            artisans and technicians bring our products to life. The result is a collection of items that are not only
+            visually appealing but also built to last, embodying the perfect blend of form and function. We understand
+            that our customers invest not just their money, but also their trust in our brand, and we are committed to
+            honoring that trust with products that stand the test of time.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4">
+            Our dedication to quality is paralleled by our commitment to our customers. They are at the heart of
+            everything we do, and their satisfaction is our ultimate reward. We strive to create a seamless shopping
+            experience, one that is as enjoyable as it is efficient. From the moment they browse our offerings to the
+            time they unbox their purchase, we want our customers to feel valued and appreciated. This commitment is
+            reflected in our customer service, where every query is addressed promptly, and every issue is resolved with
+            care. We have established a robust support system that ensures our customers always have a point of contact,
+            whether they need assistance with a product or have questions about an order.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4">
+            The positive feedback we receive from customers around the world is a testament to our efforts. In the
+            United States, John D. praises the outstanding quality and service he has experienced with our products,
+            noting that each purchase has exceeded his expectations. In Germany, Maria S. commends the craftsmanship and
+            durability of our items, expressing her intention to continue shopping with us in the future. And in Japan,
+            Akira T. highlights the excellence of our customer service and the accuracy of our product descriptions,
+            emphasizing the trust he has developed in our brand. These testimonials, and many others like them, fuel our
+            passion and drive us to continuously improve.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4">
+            Behind every successful product and every satisfied customer is a dedicated team of professionals who share
+            our vision. At the helm is Alice Johnson, our CEO and Founder, whose leadership and innovative thinking have
+            been instrumental in shaping our company's direction. Working alongside her is Michael Brown, our Chief
+            Operations Officer, who ensures that our operations run smoothly and efficiently, enabling us to deliver on
+            our promises to customers. Leading our marketing efforts is Sophia Davis, Head of Marketing, whose creative
+            strategies have helped us build a strong brand presence and connect with our target audience in meaningful
+            ways. Together, they form a dynamic team that is committed to pushing the boundaries of what is possible in
+            e-commerce, always with an eye towards the future.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4">
+            As we continue to grow and evolve, our focus remains on our core values: quality, customer satisfaction, and
+            innovation. These principles guide every aspect of our business, from the products we create to the services
+            we provide. We are constantly exploring new ways to enhance our offerings, whether through the introduction
+            of new product lines, the improvement of our existing items, or the expansion of our reach to new markets.
+            Our journey with Amazon has been an exciting one, and we are eager to see where the future takes us. We are
+            confident that, with the support of our customers and the dedication of our team, we will continue to
+            achieve great things, setting new standards of excellence in the world of e-commerce.
+        </p>
+    </main>
+
+
+
+
+    <!--footer-->
+    <footer class="bg-gray-950 text-gray-300 text-sm">
+        <div class="mt-8 text-center text-xs text-gray-400 pt-4 ">
+            <div class="mt-6">
+                <a href="#" class="hover:underline ">Conditions of Use</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="hover:underline">Privacy Notice</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="hover:underline">Consumer Health Data Privacy Disclosure</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="hover:underline">Your Ads Privacy Choices</a>
+                <p class="mt-2">&copy; 1996-2024, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

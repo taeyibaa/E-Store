@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <title>E.Site</title>
+</head>
+
+<body class="bg-white">
+    <div class="bg-gray-900 p-4 flex items-center justify-between">
+        <!--logo-->
+        <div class="flex items-center space-x-2">
+            <img src="images/R (1).png" alt="Brand Logo" class="h-12">
+        </div>
+
+        <!--search bar-->
+        <div class="ml-6 mr-6  flex-1 mx-4">
+            <input type="text" placeholder="Search Products" class="w-full p-2 rounded-md px-4 outline-none">
+        </div>
+
+        <!--navigation links-->
+        <div class="flex space-x-2 text-white">
+            <a href="http://127.0.0.1:5500/index.html"
+                class=" w-auto h-auto py-2 px-2  border-transparent hover:text-orange-400">Home</a>
+            <a href="http://127.0.0.1:5500/catalog.html"
+                class="text-orange-400 w-auto h-auto py-2 px-2  border-transparent ">Catalog</a>
+
+            <a href="http://127.0.0.1:5500/About.html"
+                class="hover:text-orange-400 w-auto h-auto py-2 px-2  border-transparent ">About
+                Us</a>
+            <a href="http://127.0.0.1:5500/contact.html"
+                class="hover:text-orange-400 w-auto h-auto py-2 px-2  border-transparent ">Contact</a>
+
+            <!--sign in | Sign up-->
+            <a href="#" id="open-signup-modal" class="  w-auto h-auto py-2 px-3 hover:text-blue-300 ">SignUp</a>
+        </div>
+
+        <!--shopping cart icon -->
+        <div class="relative mr-6">
+            <a href="http://127.0.0.1:5500/cart.html">
+                <img class="ml-6 h-14 opacity-9  0" src="images/Untitled design.png" alt="">
+                <span
+                    class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!--section-->
+    <section class="bg-gray-50 text-gray-700 py-14">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold">Explore Our Collection</h1>
+            <p class="mt-4 text-xl">Your one-stop shop for everything you need.</p>
+        </div>
+    </section>
+
+    <!--product section-->
+    <section class="py-8">
+        <div class="container mx-auto">
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!--card 1-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/vv1 (8).jpg" alt="Beauty Products" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Beauty Products</h3>
+                    <p class="mt-2 text-gray-600">Explore a wide range of skincare, makeup, and haircare products.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 2-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/homedc3.jpg" alt="Oil Paintings" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Home Decor</h3>
+                    <p class="mt-2 text-gray-600">Find distinctive items that bring charm to your home decor.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 3-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/z (3).jpg" alt="Outfits" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Outfits & Apparel</h3>
+                    <p class="mt-2 text-gray-600">Browse our selection of clothing for every occasion.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 4-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/z (6).jpg" alt="Shoes" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Shoes</h3>
+                    <p class="mt-2 text-gray-600">Step into comfort and style with our diverse shoe collection.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 border-transparent rounded  bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 5-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/ccaps.jpg" alt="Caps" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Caps & Hats</h3>
+                    <p class="mt-2 text-gray-600">Top off your look with our stylish headwear options.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 6-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/bag3.jpg" alt="Bags" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Bags & Accessories</h3>
+                    <p class="mt-2 text-gray-600">Accessorize with our collection of bags, belts, and more.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 7-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/w11.jpg" alt="Watches" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Watches</h3>
+                    <p class="mt-2 text-gray-600">Explore our collection of timeless and stylish watches.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 8-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/vv1 (5).jpg" alt="Men Outfits" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Casual Wear</h3>
+                    <p class="mt-2 text-gray-600">Discover stylish and comfortable outfits designed for men.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 9-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/z (2).jpg" alt="T-Shirts" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">T-Shirts</h3>
+                    <p class="mt-2 text-gray-600">Find your perfect fit with our range of casual and trendy T-shirts.
+                    </p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 10-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/c2.jpg" alt="Cups" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Cups</h3>
+                    <p class="mt-2 text-gray-600">Enjoy your favorite beverages with our collection of stylish cups.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+                <!--card 11-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/vv1 (7).jpg" alt="Jewelry" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Jewelry</h3>
+                    <p class="mt-2 text-gray-600">Explore elegant jewelry pieces to enhance your personal style.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+
+                </div>
+
+                <!--card 12-->
+                <div class="p-8 bg-white rounded-lg shadow-lg text-center">
+                    <img src="images/6.webp" alt="Kitchen Essentials" class="w-[300px] h-[300px] mx-auto">
+                    <h3 class="mt-4 text-xl font-semibold">Kitchen Essentials</h3>
+                    <p class="mt-2 text-gray-600">Upgrade your kitchen with our selection of must-have essentials.</p>
+                    <button
+                        class="mt-4 hover:bg-gray-900 rounded border-transparent bg-gray-950 text-white px-4 py-2">See
+                        All</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+    <!--sign in, sign up-->
+    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+
+    <!--sign up modal-->
+    <div id="signup-modal-content" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Sign Up</h2>
+                <button id="close-signup-modal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <form id="signup-form">
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-900">Username</label>
+                    <input type="text" id="username"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-900">Email</label>
+                    <input type="email" id="email"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="contact" class="block text-gray-900">Contact</label>
+                    <input type="tel" id="contact"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-900">Password</label>
+                    <input type="password" id="password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="confirm-password" class="block text-gray-900">Confirm Password</label>
+                    <input type="password" id="confirm-password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <button type="submit"
+                    class="w-full py-2 px-4 bg-gray-950 text-white  rounded-md hover:bg-gray-900">Create
+                    Account</button>
+            </form>
+            <p class="mt-4 text-sm text-gray-900">Already have an account? <a href="#" id="open-signin-modal"
+                    class="text-blue-600 text-1xl hover:underline">Sign In</a></p>
+        </div>
+    </div>
+
+    <!--sign In modal-->
+    <div id="signin-modal-content" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">Sign In</h2>
+                <button id="close-signin-modal" class="text-gray-900 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <form id="signin-form">
+                <div class="mb-4">
+                    <label for="signin-email" class="block text-gray-900">Email</label>
+                    <input type="email" id="signin-email"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="signin-password" class="block text-gray-900">Password</label>
+                    <input type="password" id="signin-password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        required>
+                </div>
+                <button type="submit" class="w-full py-2 px-4 bg-gray-950 text-white rounded-md hover:bg-gray-900">Login
+                    to Your Account</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!--footer-->
+    <footer class="bg-gray-900 text-gray-500">
+        <div class="container mx-auto max-w-5xl py-8 ">
+            <div class="flex  justify-between gap-2  mb-20">
+                <!--1rst section-->
+                <div class="w-1/4">
+                    <h3 class="font-bold text-lg mb-2 mt-8 text-gray-100">Get to Know Us</h3>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                        <li><a href="#" class="hover:underline">Blog</a></li>
+                        <li><a href="#" class="hover:underline">About Amazon</a></li>
+                        <li><a href="#" class="hover:underline">Investor Relations</a></li>
+                        <li><a href="#" class="hover:underline">Amazon Devices</a></li>
+                        <li><a href="#" class="hover:underline">Amazon Science</a></li>
+                    </ul>
+                </div>
+
+                <!--2nd section-->
+                <div class="w-1/4">
+                    <h3 class="font-bold mb-2 mt-8 text-lg text-gray-100">Make Money with Us</h3>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li><a href="#" class="hover:underline ">Sell products on Amazon</a></li>
+                        <li><a href="#" class="hover:underline">Sell on Amazon Business</a></li>
+                        <li><a href="#" class="hover:underline">Sell apps on Amazon</a></li>
+                        <li><a href="#" class="hover:underline">Become an Affiliate</a></li>
+                        <li><a href="#" class="hover:underline">Advertise Your Products</a></li>
+                        <li><a href="#" class="hover:underline">Self-Publish with Us</a></li>
+                        <li><a href="#" class="hover:underline">Host an Amazon Hub</a></li>
+                        <li><a href="#" class="hover:underline">See More Make Money with Us</a></li>
+                    </ul>
+                </div>
+
+                <!--3rd section-->
+                <div class="w-1/4">
+                    <h3 class="font-bold mb-2 mt-8 text-lg text-gray-100">Amazon Payment Products</h3>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li><a href="#" class="hover:underline">Amazon Business Card</a></li>
+                        <li><a href="#" class="hover:underline">Shop with Points</a></li>
+                        <li><a href="#" class="hover:underline">Reload Your Balance</a></li>
+                        <li><a href="#" class="hover:underline">Amazon Currency Converter</a></li>
+                    </ul>
+                </div>
+
+                <!--4rth section-->
+                <div class="w-1/4">
+                    <h3 class="font-bold mb-2 mt-8 text-lg text-gray-100">Let Us Help You</h3>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li><a href="#" class="hover:underline">Amazon and COVID-19</a></li>
+                        <li><a href="#" class="hover:underline">Your Account</a></li>
+                        <li><a href="#" class="hover:underline">Your Orders</a></li>
+                        <li><a href="#" class="hover:underline">Shipping Rates & Policies</a></li>
+                        <li><a href="#" class="hover:underline">Returns & Replacements</a></li>
+                        <li><a href="#" class="hover:underline">Manage Your Content and Devices</a></li>
+                        <li><a href="#" class="hover:underline">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center text-xs border-t border-gray-700 pt-4">
+                <div class="mt-4 flex text-md items-center space-x-4">
+                    <div class="mb-2">
+                        <img src="images/R (1).png" alt="Amazon Logo" class=" mt-5 h-8 mr-8 ">
+                    </div>
+                    <!--language dropdown-->
+                    <div class="relative">
+                        <button class="flex items-center px-4 py-2 border border-gray-600 rounded-md hover:bg-gray-600">
+                            <span class="text-gray-300">English</span>
+                            <svg class="ml-2 w-4 h-4 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute hidden mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Spanish</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">French</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">German</a>
+                        </div>
+                    </div>
+
+                    <!--currency dropdown-->
+                    <div class="relative">
+                        <button class="flex items-center px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-600">
+                            <span class="text-gray-300">USD - U.S. Dollar</span>
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute hidden mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">EUR -
+                                Euro</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">GBP -
+                                British
+                                Pound</a>
+                        </div>
+                    </div>
+
+                    <!--country dropdown-->
+                    <div class="relative">
+                        <button class="flex items-center px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-600">
+                            <span class="text-gray-300">United States</span>
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute hidden mt-2 w-32 bg-white border border-gray-300 rounded-md shadow-lg">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Canada</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">United
+                                Kingdom</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Australia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <footer class="bg-gray-950 text-gray-300 text-sm">
+        <div class="container mx-auto py-8 w-200 max-w-5xl h-auto px-4">
+            <div class="grid grid-cols-5 mt-2 gap-6">
+                <div class="w-200 h-auto" style="width: 190px; height: auto;">
+                    <h4 class="font-semibold text-sm">Amazon Music</h4>
+                    <a href="#" class="hover:underline text-gray-400">Stream millions of songs</a>
+                    <h4 class="font-semibold mt-4">Amazon Ads</h4>
+                    <a href="#" class="hover:underline text-gray-400">Reach customers wherever they spend their
+                        time</a>
+                    <h4 class="font-semibold mt-4">6pm</h4>
+                    <a href="#" class="hover:underline text-gray-400">Score deals on fashion brands</a>
+                    <h4 class="font-semibold mt-4">AbeBooks</h4>
+                    <a href="#" class="hover:underline text-gray-400">Books, art & collectibles</a>
+                    <h4 class="font-semibold mt-4">ACX</h4>
+                    <a href="#" class="hover:underline text-gray-400">Audiobook Publishing Made Easy</a>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold">AmazonGlobal</h4>
+                    <a href="#" class="hover:underline text-gray-400">Ship Orders Internationally</a>
+                    <h4 class="font-semibold mt-4">Home Services</h4>
+                    <a href="#" class="hover:underline text-gray-400">Experienced Pros Happiness Guarantee</a>
+                    <h4 class="font-semibold mt-4">Amazon Web Services</h4>
+                    <a href="#" class="hover:underline text-gray-400">Scalable Cloud Computing Services</a>
+                    <h4 class="font-semibold mt-4">Audible</h4>
+                    <a href="#" class="hover:underline text-gray-400">Listen to Books & Original Audio
+                        Performances</a>
+                    <h4 class="font-semibold mt-4">Box Office Mojo</h4>
+                    <a href="#" class="hover:underline text-gray-400">Find Movie Box Office Data</a>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold">Goodreads</h4>
+                    <a href="#" class="hover:underline text-gray-400">Book reviews & recommendations</a>
+                    <h4 class="font-semibold mt-4">IMDb</h4>
+                    <a href="#" class="hover:underline text-gray-400">Movies, TV & Celebrities</a>
+                    <h4 class="font-semibold mt-4">IMDbPro</h4>
+                    <a href="#" class="hover:underline text-gray-400">Get Info Entertainment Professionals Need</a>
+                    <h4 class="font-semibold mt-4">Kindle Direct Publishing</h4>
+                    <a href="#" class="hover:underline text-gray-400">Indie Digital & Print Publishing Made Easy</a>
+                    <h4 class="font-semibold mt-4">Prime Video Direct</h4>
+                    <a href="#" class="hover:underline text-gray-400">Video Distribution Made Easy</a>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold">Shopbop</h4>
+                    <a href="#" class="hover:underline text-gray-400">Designer Fashion Brands</a>
+                    <h4 class="font-semibold mt-4">Woot!</h4>
+                    <a href="#" class="hover:underline text-gray-400">Deals and Shenanigans</a>
+                    <h4 class="font-semibold mt-4">Zappos</h4>
+                    <a href="#" class="hover:underline text-gray-400">Shoes & Clothing</a>
+                    <h4 class="font-semibold mt-4">Ring</h4>
+                    <a href="#" class="hover:underline text-gray-400">Smart Home Security Systems</a>
+                    <h4 class="font-semibold mt-4">Eero WiFi</h4>
+                    <a href="#" class="hover:underline text-gray-400">Stream 4K Video in Every Room</a>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold">Neighbors App</h4>
+                    <a href="#" class="hover:underline text-gray-400">Real-Time Crime & Safety Alerts</a>
+                    <h4 class="font-semibold mt-4">Amazon Subscription Boxes</h4>
+                    <a href="#" class="hover:underline text-gray-400">Top subscription boxes – right to your
+                        door</a>
+                    <h4 class="font-semibold mt-4">PillPack</h4>
+                    <a href="#" class="hover:underline text-gray-400">Pharmacy Simplified</a>
+                    <h4 class="font-semibold mt-4">Sell on Amazon</h4>
+                    <a href="#" class="hover:underline text-gray-400">Start a Selling Account</a>
+                    <h4 class="font-semibold mt-4">Amazon Business</h4>
+                    <a href="#" class="hover:underline text-gray-400">Everything For Your Business</a>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center text-xs text-gray-400 pt-4">
+                <div class="mt-6">
+                    <a href="#" class="hover:underline ">Conditions of Use</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:underline">Privacy Notice</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:underline">Consumer Health Data Privacy Disclosure</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:underline">Your Ads Privacy Choices</a>
+                    <p class="mt-2">&copy; 1996-2024, Amazon.com, Inc. or its affiliates</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
